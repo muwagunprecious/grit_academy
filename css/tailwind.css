@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Primary Colors - Nigerian Heritage Professional */
+  --color-primary: #007A3D; /* Nigerian green for trust and national pride */
+  --color-primary-50: #E8F5E8;
+  --color-primary-100: #C8E6C9;
+  --color-primary-200: #A5D6A7;
+  --color-primary-300: #81C784;
+  --color-primary-400: #66BB6A;
+  --color-primary-500: #007A3D; /* Primary */
+  --color-primary-600: #00695C;
+  --color-primary-700: #004D40;
+  --color-primary-800: #00332A;
+  --color-primary-900: #001A14;
+
+  /* Secondary Colors */
+  --color-secondary: #1B4332; /* Deeper academic authority for headers */
+  --color-secondary-50: #E8F0EC;
+  --color-secondary-100: #C5D9CE;
+  --color-secondary-200: #9FC0AE;
+  --color-secondary-300: #79A78E;
+  --color-secondary-400: #5C9476;
+  --color-secondary-500: #1B4332; /* Secondary */
+  --color-secondary-600: #183D2E;
+  --color-secondary-700: #143528;
+  --color-secondary-800: #102D22;
+  --color-secondary-900: #0A1F17;
+
+  /* Accent Colors */
+  --color-accent: #FFB000; /* Achievement gold for success moments */
+  --color-accent-50: #FFF8E1;
+  --color-accent-100: #FFECB3;
+  --color-accent-200: #FFE082;
+  --color-accent-300: #FFD54F;
+  --color-accent-400: #FFCA28;
+  --color-accent-500: #FFB000; /* Accent */
+  --color-accent-600: #FFA000;
+  --color-accent-700: #FF8F00;
+  --color-accent-800: #FF6F00;
+  --color-accent-900: #E65100;
+
+  /* Background Colors */
+  --color-background: #FEFEFE; /* Clean canvas for focused learning */
+  --color-surface: #F8F9FA; /* Subtle card elevation without distraction */
+
+  /* Text Colors */
+  --color-text-primary: #2C3E50; /* Extended reading comfort and professionalism */
+  --color-text-secondary: #6C757D; /* Clear hierarchy without harsh contrast */
+
+  /* Status Colors */
+  --color-success: #28A745; /* Positive reinforcement that feels earned */
+  --color-warning: #FFC107; /* Gentle urgency for exam deadlines */
+  --color-error: #DC3545; /* Helpful guidance without academic shame */
+
+  /* Neutral Colors */
+  --color-gray-50: #F8F9FA;
+  --color-gray-100: #E9ECEF;
+  --color-gray-200: #DEE2E6;
+  --color-gray-300: #CED4DA;
+  --color-gray-400: #ADB5BD;
+  --color-gray-500: #6C757D;
+  --color-gray-600: #495057;
+  --color-gray-700: #343A40;
+  --color-gray-800: #212529;
+  --color-gray-900: #1A1E21;
+}
+
+@layer base {
+  body {
+    font-family: 'Inter', sans-serif;
+    color: var(--color-text-primary);
+    background-color: var(--color-background);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: var(--color-secondary);
+  }
+
+  .font-headline {
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .font-body {
+    font-family: 'Inter', sans-serif;
+  }
+
+  .font-accent {
+    font-family: 'Lora', serif;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary text-white px-6 py-3 rounded-lg font-headline font-semibold transition-all duration-300 hover:bg-primary-600 hover:shadow-lg;
+  }
+
+  .btn-secondary {
+    @apply bg-secondary text-white px-6 py-3 rounded-lg font-headline font-semibold transition-all duration-300 hover:bg-secondary-600 hover:shadow-lg;
+  }
+
+  .btn-accent {
+    @apply bg-accent text-secondary px-6 py-3 rounded-lg font-headline font-semibold transition-all duration-300 hover:bg-accent-600 hover:shadow-lg;
+  }
+
+  .card {
+    @apply bg-surface rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow duration-300;
+  }
+
+  .card-elevated {
+    @apply bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow duration-300;
+  }
+
+  .input-field {
+    @apply w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300;
+  }
+
+  .text-gradient-primary {
+    @apply bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent;
+  }
+
+  .text-gradient-accent {
+    @apply bg-gradient-to-r from-accent to-accent-600 bg-clip-text text-transparent;
+  }
+}
+
+@layer utilities {
+  .shadow-academic {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  }
+
+  .shadow-academic-hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+  }
+
+  .transition-academic {
+    transition: all 300ms ease;
+  }
+
+  .transition-celebration {
+    transition: all 400ms ease;
+  }
+}
